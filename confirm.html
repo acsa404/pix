@@ -1,0 +1,38 @@
+<html>
+<head>
+<action="index.html"><br><br>
+<style>
+body
+{
+background-image: url('1.jpg');
+background-repeat: no-repeat;
+background-size: 1300px 650px;
+font-size: 20px;
+}
+</style>
+<script>
+function valuess()
+{
+document.getElementById("name").innerHTML = n;
+document.getElementById("mail").innerHTML = e;
+}
+// Function to generate OTP
+function otp(){
+    var digits = '0123456789';
+    let ot = '';
+    for (let i = 0; i < 4; i++ ) {
+        ot += digits[Math.floor(Math.random() * 10)];
+    }
+    return ot;
+}
+
+document.write("OTP of 4 digits: ")
+document.write( otp() );
+  </script>
+</head>
+<body>
+<br><br>Dear <id="name" ="return valuess()">, A 4 digit verification number has been sent to your email: <id="mail" onsubmit="return valuess()">please enter the otp for confirmation
+<br><br><input type="text" name="aav"><br><br>
+<input type="button" name="Validate" value="validate" onsubmit="return otp()"><br><br>
+</body>
+</html>
